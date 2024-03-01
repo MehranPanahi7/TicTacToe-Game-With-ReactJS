@@ -1,38 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gameBoard {
+  width: 500px;
+  height: 500px;
+  background-color: #5f9ea0;
+  border: 1px solid #000;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sqaure {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid #000;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
+.sqaure:active {
+  background-color: #47787a;
+}
+
+.player {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #fff;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 22px;
+  .playerChosen {
+    color: rgb(0, 255, 4);
+    font-size: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.buttonClick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+}
+
+.restart {
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.8s;
+
+  &:hover {
+    background-color: #47787a;
   }
 }
